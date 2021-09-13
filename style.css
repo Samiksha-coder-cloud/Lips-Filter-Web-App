@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+#heading {
+    background-color: hotpink;
+    color: white;
+    width: 300px;
+    font-size: 40px;
+    text-align: center;
+    height: 70px;
+    border-radius: 10px;
+    border:solid 2px purple;
+}
+
+button {
+    font-size: 25px;
+    background-color: rgb(160, 75, 240);
+    font-family: 'Balsamiq Sans', cursive;
+    color: white;
+}
+
+canvas {
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border:dotted 5px rgb(255, 0, 149);
+    border-radius: 20px;
+    margin-top: 70px;
+    background-color: white
+}
+
+@keyframes example {
+    from{box-shadow:2px 2px 70px red;}
+    to{box-shadow: 2px 2px 70px rgb(89, 0, 255);}
+}
