@@ -1,4 +1,9 @@
+var noseX = 0;
+var noseY = 0;
+
 function preload() {
+
+    lips_image = loadImage("https://i.postimg.cc/J7f1CwN7/filter-Image-Project.png");
 }
 
 function setup() {
@@ -14,6 +19,8 @@ function setup() {
 
 function draw() {
     image(video, 0, 0, 400, 400);
+
+    image(lips_image, noseX, noseY, 60, 50);
 }
 
 function take_snapshot() {
@@ -29,7 +36,10 @@ function gotPoses(results) {
     if (results.length > 0) {
         console.log(results);
 
-        console.log("nose X = " + results[0].pose.nose.x);
-        console.log("nose Y = " + results[0].pose.nose.y);
+        noseX = results[0].pose.nose.x + 25;
+        noseY = results[0].pose.nose.y + 80;
+
+        console.log("nose X = " + noseX);
+        console.log("nose Y = " + noseY);
     }
 }
